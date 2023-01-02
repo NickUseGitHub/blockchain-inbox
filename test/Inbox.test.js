@@ -29,4 +29,14 @@ describe("Inbox", function () {
 
     assert.equal(msg, INITIAL_MESSAGE);
   });
+
+  it("can change message", async function () {
+    const changedMessage = "bye";
+
+    await inbox.methods.setMessage(changedMessage).send({ from: accounts[0] });
+
+    const msg = await inbox.methods.message().call();
+
+    assert.equal(msg, changedMessage);
+  });
 });
