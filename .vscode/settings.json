@@ -1,3 +1,5 @@
 {
+  "editor.formatOnSave": true,
+  "javascript.format.enable": true,
   "solidity.compileUsingRemoteVersion": "v0.4.17+commit.bdeb9e52"
 }
